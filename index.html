@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ticketing Center!</title>
+	<style>
+
+        body {
+            background-color: #fff9e3;
+            font-family: sans-serif;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+            border: 2px solid #e8c1c6;
+            border-radius: 10px;
+            display: inline-block;
+            background-color: #fff3f0;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: #f7d6e0;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #e8a8b8;
+        }
+    </style>
+
+</head>
+<body>
+
+	<br>
+	<br>
+
+    <h1 style="color: #d8a7b1;">♡ Ticketing Center ♡</h1>
+    
+    <div class="container">
+        <form>
+            <label style="color: #b288a3; font-size: 18px;">Complete Name:</label>
+            <input type="text" style="border: 1px solid #e8c1c6; padding: 5px; border-radius: 5px;">
+            <br>
+            <br>
+            
+            <label style="color: #b288a3; font-size: 18px;">Email:</label>
+            <input type="email" style="border: 1px solid #e8c1c6; padding: 5px; border-radius: 5px;">
+            <br>
+            <br>
+            
+            <button type="button">Submit Info</button>
+            <br>
+            <br>
+            
+            <label style="color: #b288a3; font-size: 18px;">Choose your seat:</label>
+            <select style="border: 1px solid #e8c1c6; padding: 5px; border-radius: 5px;">
+                <option value="none">Select</option>
+                <option value="front">Front</option>
+                <option value="middle">Middle</option>
+                <option value="back">Back</option>
+            </select>
+            <br>
+            <br>
+            
+            <label style="color: #b288a3; font-size: 18px;">Ticket Type:</label>
+            <select id="tickettype" style="border: 1px solid #e8c1c6; padding: 5px; border-radius: 5px;">
+                <option value="none">Select</option>
+                <option value="vip">VIP</option>
+                <option value="regular">Regular</option>
+            </select>
+            <br>
+            <br>
+            
+            <button type="button" onclick="showPrice()">Ticket Price</button>
+            <br>
+            <br>
+        </form>
+        
+        <img src="hiii.png" width="250px" style="border-radius: 10px;">
+        <br>
+        <br>
+        
+        <button type="button">Print Ticket</button>
+    </div>
+
+    <script>
+        function showPrice() {
+            var ticket = document.getElementById('tickettype').value;
+            var price = ticket === 'vip' ? '₱500' : ticket === 'regular' ? '₱300' : 'Please select a ticket type!';
+            alert('Ticket Price: ' + price);
+        }
+    </script>
+
+    <h6 style="color: grey;">@2025 Gutierrez</h6>
+
+</body>
+</html>
